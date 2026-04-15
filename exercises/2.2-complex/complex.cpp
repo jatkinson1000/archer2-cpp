@@ -49,6 +49,11 @@ Complex operator*(Complex const& a, Complex const& b) {
   return Complex{a.re*b.re - a.im*b.im, a.im*b.re + a.re*b.im};
 }
 
+Complex operator/(Complex const& a, Complex const& b) {
+  double quotient = b.norm2();
+  return Complex{(a.re*b.re + a.im*b.im)/quotient, (a.im*b.re + a.re*b.im)/quotient};
+}
+
 Complex operator-(Complex const& a) {
   return Complex{-a.re, -a.im};
 }
