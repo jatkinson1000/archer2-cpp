@@ -13,13 +13,16 @@ int main() {
   Vertex v4 {0, 0, 5};
 
   // TODO: Construct a triangle using vertices v1, v2, and v3.
+  Triangle myTri = Triangle({v1, v2, v3});
 
   // TODO: Print:
   //   - the number of vertices in the triangle
   //   - the number of dimensions of the triangle
   //   - the area of the triangle  (expected to be 6)
   //   - the vertices of the triangle
-
+  std::cout << "Num Vertices = " << myTri.getNumVertices() << std::endl;
+  std::cout << "Dimensions = " << myTri.getNumDims() << std::endl;
+  std::cout << "Area = " << myTri.getArea() << std::endl;
 
   // TODO: Construct a tetrahedron using vertices v1, v2, v3, and v4.
 
