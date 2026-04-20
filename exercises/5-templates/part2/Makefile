@@ -1,6 +1,6 @@
 CXXFLAGS = --std=c++20
 
-main : main.o
+main : main.o array.hpp
 	$(CXX) $^ -o $@
 
 run : main
